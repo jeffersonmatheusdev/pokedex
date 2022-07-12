@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding:0;
+  margin:0;
+  vertical-align:baseline;
+  list-style:none;
+  border:0
+}
+
+@layer components{
+  @responsive {
+      .text-shadow {
+        text-shadow: 1px 1px white;
+      }
+    }
+}
+
+@keyframes popup {
+  0%, 100% {
+      transform: translateY(-15%);
+      animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+  50% {
+      transform: none;
+      animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.card:hover{
+  animation: popup 800ms;
+}
+
+html, body, * {
+  @apply
+  cursor-poke
+}
